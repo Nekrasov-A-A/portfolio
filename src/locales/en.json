@@ -1,0 +1,22 @@
+{
+  "codewars": {
+    "description": "CodeWars is an online platform for learning programming languages by solving tasks of varying degrees of complexity. You are given a description of the task and written tests are attached to check the correct solution. ",
+    "myGoal": "JavaScript is the only language I learn on CodeWars.",
+    "myComment": "It so happened that I have 2 accounts:",
+    "link": "Go to CodeWars",
+    "tasks": {
+      "taskLink": "Link",
+      "mySolution": "My solution",
+      "bestPractice": "Best practice",
+      "gendalf": "Gendalf said to me:"
+    }
+  },
+  "homePage": {
+    "myFullName": "Aleksandr Nekrasov",
+    "originalLink": "Source",
+    "myWebSite": "Go to site",
+    "stack": "Stack:",
+    "challenges": "Challenges",
+    "projects": "Projects"
+  }
+}
