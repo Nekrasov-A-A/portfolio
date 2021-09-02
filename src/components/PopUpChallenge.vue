@@ -98,15 +98,15 @@ export default {
               > button
                 padding: 15px 20px
                 width: 100%
-                box-shadow: 0 0 4px 2px rgba(0,0,0,.2)
+                box-shadow: 0 0 4px 2px hsla(327,100%,53%,.4)
                 border-radius: 50px
-                border: 1px solid hsl(212,68%,40%)
+                border: 1px solid hsl(327,100%,53%)
                 background-color: transparent
-                color: hsl(212,68%,40%)
+                color: hsl(327,100%,53%)
                 transition: all .3s
                 font-size: 18px
                 &:hover
-                  background-color: hsl(212,68%,40%)
+                  background-color: hsl(327,100%,53%)
                   border-color: transparent
                   color: hsl(0,0%,100%)
           > .sup__link
