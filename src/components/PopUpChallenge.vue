@@ -127,12 +127,12 @@ export default {
                 border-radius: 50px
                 box-shadow: 0px 0px 4px 2px rgba(0,0,0,.1)
                 transition: all .3s
-                color: hsl(92,68%,40%)
+                color: hsl(239,91%,50%)
                 background-color: transparent
-                border: 1px solid hsl(92,68%,40%)
+                border: 1px solid hsl(239,91%,50%)
                 font-size: 18px
                 &:hover
-                  background-color: hsl(92,68%,40%)
+                  background-color: hsl(239,91%,50%)
                   color: hsl(0,0%,100%)
                   border-color: transparent
 </style>
