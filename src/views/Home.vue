@@ -101,6 +101,9 @@ export default {
         > .fa-github
           color: hsl(0,0%,0%)
           background: hsl(0,0%,100%)
+          @media (prefers-color-scheme: dark)
+            color: hsl(0,0%,0%)
+            background: hsl(0,0%,100%)
         > .fa-telegram
           color: hsl(0,0%,100%)
           background: hsl(199,81%,52%)
