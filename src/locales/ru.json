@@ -13,6 +13,8 @@
   },
   "homePage": {
     "myFullName": "Александр Некрасов",
+    "profession": "Front-end разработчик",
+    "greeting": "Привет, я ",
     "originalLink": "Источник",
     "myWebSite": "Перейти на сайт",
     "stack": "Стек:",

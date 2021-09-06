@@ -13,6 +13,8 @@
   },
   "homePage": {
     "myFullName": "Aleksandr Nekrasov",
+    "profession": "Front-end developer",
+    "greeting": "Hi, I'm ",
     "originalLink": "Source",
     "myWebSite": "Go to site",
     "stack": "Stack:",

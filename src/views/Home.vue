@@ -3,7 +3,13 @@
     <!--  -->
     <section class="cv__info">
       <div class="info__image-wrapper"></div>
-      <h1>{{ $t("homePage.myFullName") }}</h1>
+      <h1>
+        <Typewriter>
+          <template #default>{{ $t("homePage.greeting") }}</template>
+          <template #name>{{ $t("homePage.myFullName") }}</template>
+          <template #profession>{{ $t("homePage.profession") }}</template>
+        </Typewriter>
+      </h1>
       <div class="social">
         <a href="https://github.com/Nekrasov-A-A" target="_blank">
           <font-awesome-icon
@@ -29,8 +35,9 @@
 <script>
 import ProjectsCard from "../components/ProjectsCard.vue";
 import ChallengesCard from "../components/ChallengesCard.vue";
+import Typewriter from "../components/Typewriter.vue";
 export default {
-  components: { ProjectsCard, ChallengesCard },
+  components: { ProjectsCard, ChallengesCard, Typewriter },
 };
 </script>
 
@@ -65,7 +72,7 @@ export default {
         border-color: hsl(180,100%,50%)
     > h1
       font-size: 24px
-      margin-bottom: 20px
+      margin: 0 10% 20px
     > .social
       display: flex
       margin-bottom: 40px
