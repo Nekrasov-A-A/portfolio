@@ -1,5 +1,6 @@
 <template>
-  <div class="wrapper__cv">
+  <Loader v-if="loader" />
+  <div class="wrapper__cv" v-else>
     <!--  -->
     <section class="cv__info" @mousemove="setCoordinate($event)">
       <div class="info__image-wrapper"></div>
@@ -36,17 +37,22 @@
 import ProjectsCard from "../components/ProjectsCard.vue";
 import ChallengesCard from "../components/ChallengesCard.vue";
 import Typewriter from "../components/Typewriter.vue";
+import Loader from "../components/Loader.vue";
 export default {
   data: () => ({
     bgPositionX: "",
     bgPositionY: "",
+    loader: true,
   }),
-  components: { ProjectsCard, ChallengesCard, Typewriter },
+  components: { ProjectsCard, ChallengesCard, Typewriter, Loader },
   methods: {
     setCoordinate: function(event) {
       this.bgPositionX = (4 * event.pageX) / 470 + 50 + "%";
       this.bgPositionY = (4 * event.pageY) / 470 + 40 + "%";
     },
+  },
+  mounted: function() {
+    window.addEventListener("load", () => (this.loader = false));
   },
 };
 </script>
