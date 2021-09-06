@@ -1,10 +1,10 @@
 <template>
   <div class="wrapper__cv">
     <!--  -->
-    <section class="cv__info">
+    <section class="cv__info" @mousemove="setCoordinate($event)">
       <div class="info__image-wrapper"></div>
-      <h1>
-        <Typewriter>
+      <h1 class="cv__headline">
+        <Typewriter :bgPositionX="bgPositionX" :bgPositionY="bgPositionY">
           <template #default>{{ $t("homePage.greeting") }}</template>
           <template #name>{{ $t("homePage.myFullName") }}</template>
           <template #profession>{{ $t("homePage.profession") }}</template>
@@ -37,7 +37,17 @@ import ProjectsCard from "../components/ProjectsCard.vue";
 import ChallengesCard from "../components/ChallengesCard.vue";
 import Typewriter from "../components/Typewriter.vue";
 export default {
+  data: () => ({
+    bgPositionX: "",
+    bgPositionY: "",
+  }),
   components: { ProjectsCard, ChallengesCard, Typewriter },
+  methods: {
+    setCoordinate: function(event) {
+      this.bgPositionX = (4 * event.pageX) / 470 + 50 + "%";
+      this.bgPositionY = (4 * event.pageY) / 470 + 40 + "%";
+    },
+  },
 };
 </script>
 
@@ -70,9 +80,9 @@ export default {
       &:hover
         box-shadow: 0 0 6px 2px hsl(180,100%,50%)
         border-color: hsl(180,100%,50%)
-    > h1
+    > .cv__headline
       font-size: 24px
-      margin: 0 10% 20px
+      margin-bottom: 20px
     > .social
       display: flex
       margin-bottom: 40px

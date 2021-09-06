@@ -3,8 +3,20 @@
     <p><slot> Hi, I'm </slot></p>
     <span class="typewriter">
       <span>
-        <span> <slot name="name">Aleksandr Nekrasov</slot> </span>
-        <span>
+        <span
+          :style="{
+            backgroundPositionX: bgPositionX,
+            backgroundPositionY: bgPositionY,
+          }"
+        >
+          <slot name="name">Aleksandr Nekrasov</slot>
+        </span>
+        <span
+          :style="{
+            backgroundPositionX: bgPositionX,
+            backgroundPositionY: bgPositionY,
+          }"
+        >
           <slot name="profession">Front-end developer</slot>
         </span>
       </span>
@@ -13,15 +25,20 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: ["bgPositionX", "bgPositionY"],
+};
 </script>
 
 <style lang="sass" scoped>
-p
+div
+
+  p
     display: inline
     @media screen and (max-width: $mobile)
         text-align: center
         display: block
+
 .typewriter
   display: inline-block
   vertical-align: bottom
@@ -30,6 +47,11 @@ p
   display: grid
   overflow: hidden
   height: 1.1em
+  background: url('../assets/test5.jpg') repeat
+  background-position: 50% 40%
+  -webkit-background-clip: text
+  color: transparent
+
 
 .typewriter span span
   width: 0%
@@ -37,7 +59,7 @@ p
   overflow: hidden
   height: inherit
   word-break: break-all
-  animation: imitationCarriage 0.5s infinite steps(1), changeWidth 2s linear infinite alternate, changeText 8s steps(2) infinite
+  animation: imitationCarriage .5s infinite steps(1), changeWidth 2s linear infinite alternate, changeText 8s steps(2) infinite
 
 .typewriter span span:before
   content: " "
