@@ -10,6 +10,7 @@ import "highlight.js/styles/tomorrow-night-eighties.css";
 // tomorrow-night-bright.css
 import Loader from "@/components/Loader.vue";
 import "./fa.config";
+Vue.config.devtools = true;
 Vue.config.productionTip = false;
 Vue.use(VueHighlightJS);
 Vue.component("Loader", Loader);
