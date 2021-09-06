@@ -11,7 +11,8 @@ export default {};
 <style lang="sass" scoped>
 .wrap
   box-sizing: border-box
-  height: calc(100vh - 64px)
+  height: 100vh
+  position: absolute
   overflow: hidden
   display: flex
   align-items: center
@@ -24,11 +25,11 @@ export default {};
   width: 0
   border-bottom-color: #fff
   position: absolute
-  animation: rotateA 2s linear infinite 0.5s
+  animation: rotateA 1.2s linear infinite 0.3s
 
 .triangle:nth-child(2)
   transform: rotate(90deg)
-  animation: rotateB 2s linear infinite
+  animation: rotateB 1.2s linear infinite
 
 @keyframes rotateA
   0%, 25%

@@ -1,34 +1,45 @@
 <template>
   <div id="app">
-    <header class="header">
-      <nav>
-        <div class="control__languages">
-          <div
-            @click="changeLanguage('ru')"
-            :class="{ active: $i18n.locale === 'ru' }"
-          >
-            RU
+    <Loader v-if="loader" />
+    <main v-else>
+      <header class="header">
+        <nav>
+          <div class="control__languages">
+            <div
+              @click="changeLanguage('ru')"
+              :class="{ active: $i18n.locale === 'ru' }"
+            >
+              RU
+            </div>
+            <div
+              @click="changeLanguage('en')"
+              :class="{ active: $i18n.locale === 'en' }"
+            >
+              EN
+            </div>
           </div>
-          <div
-            @click="changeLanguage('en')"
-            :class="{ active: $i18n.locale === 'en' }"
-          >
-            EN
-          </div>
-        </div>
-      </nav>
-    </header>
-    <router-view />
+        </nav>
+      </header>
+      <router-view />
+    </main>
   </div>
 </template>
 
 <script>
 import "normalize.css";
 export default {
+  data: () => ({
+    loader: true,
+  }),
   methods: {
     changeLanguage: function(props) {
       this.$i18n.locale = props;
     },
+  },
+  mounted: function() {
+    window.addEventListener("DOMContentLoaded", () => {
+      setTimeout(() => (this.loader = false), 300);
+    });
   },
 };
 </script>
