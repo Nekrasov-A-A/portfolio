@@ -47,7 +47,7 @@ div
   display: grid
   overflow: hidden
   height: 1.1em
-  background: url('../assets/test5.jpg') repeat
+  background: url('../assets/text-mask-bg.jpg') repeat
   background-position: 50% 40%
   -webkit-background-clip: text
   color: transparent
