@@ -2,6 +2,12 @@ export default {
   state: {
     projects: [
       {
+        name: "Neomorphism form",
+        image: require("@/assets/ProjectsPreview/neomorphism-form.jpg"),
+        link: "https://neomorphism-form-nekrasov-a-a.netlify.app/",
+        stack: { vue: true, js: true, sass: true },
+      },
+      {
         name: "First meeting with Three.js",
         image: require("@/assets/ProjectsPreview/first-meeting-with-Three.js.jpg"),
         link: "https://first-meeting-with-threejs-nekrasov-a-a.netlify.app/",
