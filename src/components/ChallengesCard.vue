@@ -9,11 +9,6 @@
     </transition>
     <h1>{{ $t("homePage.challenges") }}</h1>
     <div class="cards__box">
-      <div class="card" @click="pushToCodewars">
-        <div class="card__description">
-          <h1>Codewars</h1>
-        </div>
-      </div>
       <div
         class="card"
         v-for="(challenge, index) of getChallenges"
@@ -48,9 +43,6 @@ export default {
     openPopUp: function(props) {
       this.dataChallenge = props;
       this.isShowPopUp = true;
-    },
-    pushToCodewars: function() {
-      this.$router.push("/codewars");
     },
   },
 };

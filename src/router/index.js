@@ -10,11 +10,6 @@ const routes = [
     name: "Home",
     component: Home,
   },
-  {
-    path: "/codewars",
-    name: "Codewars",
-    component: () => import("../views/CodeWars.vue"),
-  },
 ];
 
 const router = new VueRouter({
